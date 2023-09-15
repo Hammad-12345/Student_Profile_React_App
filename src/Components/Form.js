@@ -204,37 +204,35 @@ export default function Form() {
           placeholder="search person"
           onChange={search_data}
         ></input>
-
-        <table>
-          <thead>
-            <th>Uni_ID</th>
-            <th>Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>Action</th>
-          </thead>
-          <tbody>
-            {Arr_data.map((field, index) => (
-              <tr key={index}>
-                <td>{field.uni_id}</td>
-                <td>{field.Name}</td>
-                <td>{field.Address}</td>
-                <td>{field.City}</td>
-                <td>
-                  <button onClick={() => edit_data(field, field.uni_id)}>
-                    <i class="fa-regular fa-pen-to-square"></i>
-                  </button>
-                  <button
-                    onClick={() => deletedata(field, index, field.uni_id)}
-                  >
-                    <i class="fa-solid fa-trash-can"></i>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
+
+      <table>
+        <thead>
+          <th>Uni_ID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          {Arr_data.map((field, index) => (
+            <tr key={index}>
+              <td>{field.uni_id}</td>
+              <td>{field.Name}</td>
+              <td>{field.Address}</td>
+              <td>{field.City}</td>
+              <td>
+                <button onClick={() => edit_data(field, field.uni_id)}>
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button onClick={() => deletedata(field, index, field.uni_id)}>
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 }

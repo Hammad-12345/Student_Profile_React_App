@@ -7,10 +7,10 @@
 } */
 
 body {
-    display: flex;
+    /* display: flex;
     min-height: 100vh;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     font-weight: 800;
 }
 
@@ -39,7 +39,7 @@ div.main_form
    display: flex;
    flex-direction: column;
    max-width: 100%;
-   /* margin: auto; */
+   margin: auto;
 }
 div.main_form .form_container {
     display: flex;
@@ -68,8 +68,9 @@ div.main_form .form_container .form_items {
 table {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 100%;
-    /* overflow-x: auto; */
+    width: 1200px;
+    margin: auto;
+    overflow-x: auto;
 }
 
 table thead th {
@@ -139,4 +140,7 @@ select
 select option
 {
     font-weight: 800;
+}
+@media screen and (max-width:576px) {
+    
 }
