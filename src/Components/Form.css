@@ -69,9 +69,7 @@ table {
     border: 1px solid black;
     border-collapse: collapse;
     width: 1200px;
-    max-width: 100%;
     margin: auto;
-    overflow-x: auto;
 }
 
 table thead th {
@@ -142,6 +140,10 @@ select option
 {
     font-weight: 800;
 }
-@media screen and (max-width:576px) {
-    
+@media screen and (max-width:1200px) {
+    table
+    {
+        min-width: 1200px;
+        overflow-x: auto;
+    }
 }
